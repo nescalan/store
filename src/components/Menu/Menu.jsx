@@ -1,6 +1,7 @@
 import React from "react";
 import "./Menu.scss";
-import cart from "../../assets/cart.svg";
+import { NavLink } from "react-router-dom";
+// import cart from "../../assets/cart.svg";
 
 const Menu = () => {
   const updatemenu = () => {};
@@ -16,7 +17,7 @@ const Menu = () => {
           <label></label>
           <ul>
             <li>
-              <a href="http://">Clothes</a>
+              <NavLink to="/clothes">Clothes</NavLink>
             </li>
             <li>
               <a href="http://">Electronics</a>
