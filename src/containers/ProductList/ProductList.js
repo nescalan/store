@@ -1,20 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useFetchProducts } from "../../utilities/hooks/useFetchProducts";
 import { ProductItem } from "../../components";
 import "./ProductList.scss";
 
 const API = "https://api.escuelajs.co/api/v1/products?limit=8&offset=0";
 
 const ProductList = () => {
-  const [products, setProduct] = useState(null);
-
-  useEffect(() => {
-    fetch(API)
-      .then((response) => response.json())
-      .then((products) => setProduct(products));
-  }, []);
-
-  console.log(products);
-
+  const { products } = useFetchProducts(API);
   return (
     <>
       <section>
