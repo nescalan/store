@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+imp
 
 const ProductList = () => {
   const [products, setProduct] = useState([]);
@@ -7,6 +8,7 @@ const ProductList = () => {
 
   return (
     <div className="container">
+      <ProctItem
       <h1>Productos</h1>
     </div>
   );
