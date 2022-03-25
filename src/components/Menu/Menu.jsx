@@ -16,11 +16,23 @@ const Menu = () => {
           <label></label>
           <ul>
             <li>
-              <a href="http://">Home</a>
+              <a href="http://">Clothes</a>
             </li>
             <li>
+              <a href="http://">Electronics</a>
+            </li>
+            <li>
+              <a href="http://">Furniture</a>
+            </li>
+            <li>
+              <a href="http://">Toys</a>
+            </li>
+            <li>
+              <a href="http://">Others</a>
+            </li>
+            {/* <li>
               <a className="dropdown-arrow" href="#">
-                Products
+                Cloths
               </a>
               <ul className="sub-menus">
                 <li>
@@ -58,7 +70,7 @@ const Menu = () => {
                   <a href="http://"> Sub Menu 3</a>
                 </li>
               </ul>
-            </li>
+            </li> */}
             <li>
               <a href="http://">Contact Us</a>
             </li>

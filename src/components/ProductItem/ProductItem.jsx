@@ -1,17 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import "./ProductItem.scss";
 
-const API = "https://api.escuelajs.co/api/v1/products";
-
-const ProductItem = () => {
-  const [state, setState] = useState([]);
-
-  useEffect(() => {
-    fetch(API)
-      .then((response) => response.json())
-      .then((state) => setState(state));
-  }, []);
-  console.table(state);
-  return <div>Soy Product Item</div>;
+const ProductItem = ({ products }) => {
+  return (
+    <>
+      {!products ? (
+        <div className="product-item">
+          <i className="lds-dual-ring "></i>
+        </div>
+      ) : (
+        products.map((product) => (
+          <div className="product-item" key={`produt-id-${product.id}`}>
+            <img src={product.images[0]} alt="product photography" />
+            <h1>{product.title}</h1>
+            <span className="product-item-category">
+              Category: {product.category.name}
+            </span>
+            <p>{product.description}</p>
+          </div>
+        ))
+      )}
+    </>
+  );
 };
 
 export default ProductItem;

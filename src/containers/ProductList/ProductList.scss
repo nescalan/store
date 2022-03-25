@@ -1,0 +1,16 @@
+.product-list {
+  height: 100px;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.product-list-title {
+  font-weight: 300;
+  font-size: 4.6rem;
+}
+
+.product-list-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
