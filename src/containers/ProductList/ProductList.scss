@@ -1,16 +1,59 @@
+@import "../../utilities/styles/breakpoints";
+
 .product-list {
   height: 100px;
   padding-top: 60px;
   text-align: center;
+  &-title {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+  &-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 
-.product-list-title {
-  font-weight: 300;
-  font-size: 4.6rem;
+@media (min-width: $mobile) {
+  .product-list {
+    &-title {
+      font-size: 2.5rem;
+    }
+  }
 }
 
-.product-list-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+@media (min-width: $tablet) {
+  .product-list {
+    max-width: 720px;
+    &-title {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media (min-width: $laptop) {
+  .product-list {
+    max-width: 960px;
+    &-title {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .product-list {
+    max-width: 1200px;
+    &-title {
+      font-size: 4rem;
+    }
+  }
+}
+@media (min-width: $desktop-xxl) {
+  .product-list {
+    max-width: 1400px;
+    &-title {
+      font-size: 4.5rem;
+    }
+  }
 }
