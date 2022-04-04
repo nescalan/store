@@ -1,5 +1,7 @@
+@import "../../utilities/styles/breakpoints";
+
 .product-item {
-  width: 32%;
+  margin: 0 auto;
   img {
     width: 100%;
   }
@@ -12,7 +14,63 @@
   p {
     font-size: 1.8rem;
   }
+  &-category {
+    font-weight: bold;
+  }
 }
-.product-item-category {
-  font-weight: bold;
+
+@media (min-width: $mobile) {
+  .product-item {
+    width: 45%;
+    img {
+      width: 100%;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    span {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+    &-category {
+      font-weight: normal;
+    }
+  }
 }
+
+// @media (min-width: $tablet) {
+//   .product-list {
+//     max-width: 720px;
+//     &-title {
+//       font-size: 3rem;
+//     }
+//   }
+// }
+
+// @media (min-width: $laptop) {
+//   .product-list {
+//     max-width: 960px;
+//     &-title {
+//       font-size: 3.5rem;
+//     }
+//   }
+// }
+
+// @media (min-width: $desktop) {
+//   .product-list {
+//     max-width: 1200px;
+//     &-title {
+//       font-size: 4rem;
+//     }
+//   }
+// }
+// @media (min-width: $desktop-xxl) {
+//   .product-list {
+//     max-width: 1400px;
+//     &-title {
+//       font-size: 4.5rem;
+//     }
+//   }
+// }

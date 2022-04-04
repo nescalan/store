@@ -6,7 +6,7 @@ const ProductItem = ({ products }) => {
     <>
       {!products ? (
         <div className="product-item">
-          <i className="lds-dual-ring "></i>
+          <i className="lds-dual-ring"></i>
         </div>
       ) : (
         products.map((product) => (
