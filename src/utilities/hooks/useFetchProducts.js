@@ -7,8 +7,10 @@ const useFetchProducts = (API) => {
     fetch(API)
       .then((response) => response.json())
       .then((products) => setProduct(products));
-  }, [API]);
+  }, []);
 
   return { products };
 };
 export { useFetchProducts };
+
+const URL = "https://jsonplaceholder.typicode.com/posts";

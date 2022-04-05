@@ -1,81 +1,51 @@
 @import "../../utilities/styles/breakpoints";
 
 .product-item {
-  border: 1px solid red;
-  margin: 10 auto;
+  margin-top: -100px;
+  // border: 1px solid green;
+  text-align: center;
+  width: $mobile;
+  margin: 0 auto;
   img {
     width: 100%;
   }
   h1 {
     margin-top: 5px;
-    font-size: 2.5rem;
-  }
-  span {
-    display: inline-block;
-    margin-top: 5px;
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  p {
-    display: block;
-    margin-top: 5px;
-    font-size: 1.8rem;
-    font-weight: 300;
+    font-size: 1.7rem;
   }
   &-category {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  &-description {
+    height: 40px;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 300;
+    text-align: justify;
+  }
+  &-price {
+    text-align: right;
     font-weight: bold;
   }
 }
 
-@media (min-width: $mobile) {
+@media (min-width: $tablet) {
   .product-item {
     width: 45%;
-    h1 {
-      font-size: 2rem;
-    }
-    span {
-      font-size: 1.5rem;
-    }
-    p {
-      font-size: 2rem;
-    }
-    &-category {
-      font-weight: normal;
-    }
   }
 }
 
-// @media (min-width: $tablet) {
-//   .product-list {
-//     max-width: 720px;
-//     &-title {
-//       font-size: 3rem;
-//     }
-//   }
-// }
+@media (min-width: $laptop) {
+  .product-item {
+    width: 30%;
+  }
+}
 
-// @media (min-width: $laptop) {
-//   .product-list {
-//     max-width: 960px;
-//     &-title {
-//       font-size: 3.5rem;
-//     }
-//   }
-// }
-
-// @media (min-width: $desktop) {
-//   .product-list {
-//     max-width: 1200px;
-//     &-title {
-//       font-size: 4rem;
-//     }
-//   }
-// }
-// @media (min-width: $desktop-xxl) {
-//   .product-list {
-//     max-width: 1400px;
-//     &-title {
-//       font-size: 4.5rem;
-//     }
-//   }
-// }
+@media (min-width: $desktop) {
+  .product-item {
+    width: 24%;
+  }
+}

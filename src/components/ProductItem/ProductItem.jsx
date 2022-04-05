@@ -13,8 +13,13 @@ const ProductItem = ({ products }) => {
           <div className="product-item" key={`produt-id-${product.id}`}>
             <img src={product.images[0]} alt="product photography" />
             <h1>{product.title}</h1>
-            <span>Category: {product.category.name}</span>
-            <p>{product.description}</p>
+            <span className="product-item-category">
+              Category: {product.category.name}
+            </span>
+            <p className="product-item-description">{product.description}</p>
+            <div>
+              <p className="product-item-price">Price: ${product.price}</p>
+            </div>
           </div>
         ))
       )}
