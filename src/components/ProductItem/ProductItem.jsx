@@ -3,9 +3,9 @@ import addToCart from "../../assets/icons/bt_add_to_cart.svg";
 import "./ProductItem.scss";
 
 const ProductItem = ({ products }) => {
-  const [cart, setCart] = useState("");
+  const [cart, setCart] = useState([]);
   const handleClick = () => {
-    setCart("Clicked");
+    setCart([]);
   };
 
   return (
@@ -29,7 +29,6 @@ const ProductItem = ({ products }) => {
               <figure onClick={() => handleClick()}>
                 <img src={addToCart} alt="add to cart" />
               </figure>
-              {cart}
             </div>
           </div>
         ))
